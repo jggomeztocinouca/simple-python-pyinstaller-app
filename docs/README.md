@@ -8,7 +8,15 @@ Este proyecto demuestra el proceso de construcción y despliegue de un sistema u
 
 ## Configuración
 
-### Paso 1: Configuración con Terraform
+### Paso 1: Construcción de la Imagen de Jenkins
+
+En el directorio donde se encuentre el `Dockerfile`, proceda de la siguiente manera:
+
+```
+docker build -t jenkins_server .
+```
+
+### Paso 2: Configuración con Terraform
 
 En el directorio donde se encuentre el `Terrafile`, proceda de la siguiente manera:
 
@@ -20,14 +28,6 @@ En el directorio donde se encuentre el `Terrafile`, proceda de la siguiente mane
    ```
    terraform apply
    ```
-
-### Paso 2: Construcción de la Imagen de Jenkins
-
-En el directorio donde se encuentre el `Dockerfile`, proceda de la siguiente manera:
-
-```
-docker build -t jenkins_server .
-```
 
 ### Paso 3: Configuración de Jenkins
 
