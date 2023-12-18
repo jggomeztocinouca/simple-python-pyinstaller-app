@@ -76,8 +76,9 @@ RUN apt-get update && apt-get install -y docker-ce-cli
 USER jenkins
 
 # Instala plugins específicos en Jenkins utilizando el CLI de plugins de Jenkins
-# Instala la versión 1.27.9 del plugin Blue Ocean y la versión 572.v950f58993843 del plugin Docker workflow
-RUN jenkins-plugin-cli --plugins "blueocean:1.27.9 docker-workflow:572.v950f58993843"
+RUN jenkins-plugin-cli --plugins "blueocean-pipeline-api-impl:latest"
+RUN jenkins-plugin-cli --plugins "docker-workflow:latest"
+RUN jenkins-plugin-cli --plugins "json-path-api:latest"
 ```
 
 ### Terraform
