@@ -22,3 +22,4 @@ USER jenkins
 # Instala plugins específicos en Jenkins utilizando el CLI de plugins de Jenkins
 RUN jenkins-plugin-cli --plugins "blueocean-pipeline-api-impl:latest"
 RUN jenkins-plugin-cli --plugins "docker-workflow:latest"
+RUN jenkins-plugin-cli --plugins "json-path-api:latest"
